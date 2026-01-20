@@ -2,12 +2,257 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,
-    initial-scale=1.0">
-    <tittle>Test RevoU!</tittle>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test RevoU SE Bootcamp</title>
+
+    <!-- CDN Tailwind CSS (langsung bisa dipakai tanpa install) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <h1>Hello World!</h1>
-    <h2>Ini Ivan</h2>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-yellow-100 p-6">
+        <h1 class="text-3xl font-bold text-blue-600">
+            Hello World
+        </h1>
+
+        <!-- <span> digunakan untuk styling teks kecil di dalam paragraf -->
+        <p class="mt-2">
+            Halo, Nama Saya
+            <span class="font-semibold">Ivan Edward</span>
+        </p>
+    </header>
+
+    <!-- KONTEN UTAMA -->
+    <main class="max-w-4xl mx-auto p-6 space-y-10">
+
+        <!-- ===== HEADING KONTEN UTAMA ===== -->
+        <section>
+            <h1 class="text-2xl font-bold mb-2">Contoh Heading</h1>
+            <h1 class="text-xl font-bold">Heading 1</h1>
+            <h2 class="text-lg font-semibold">Heading 2</h2>
+            <h3 class="text-base font-medium">Heading 3</h3>
+            <h4 class="text-sm">Heading 4</h4>
+            <h5 class="text-xs text-gray-500">Heading 5</h5>
+        </section>
+
+        <!-- ===== FORMAT TEXT ===== -->
+        <section>
+            <p>
+                Teks ini untuk contoh
+                <b>Bold</b>,
+                <i>Italic</i>,
+                <u>Underline</u>
+            </p>
+
+            <p class="mt-2">
+                Contoh teks
+                <sub>Dibawah</sub>
+                dan
+                <sup>Diatas</sup>
+            </p>
+        </section>
+
+        <!-- ===== BULLET POINT ===== -->
+        <section>
+            <h2 class="text-xl font-bold mb-3">Bullet Point</h2>
+
+            <!-- atribut bullet point: list-disc -->
+            <ul class="list-disc pl-6 space-y-2">
+                <li>
+                    Pepaya
+                    <p class="text-sm text-gray-600">
+                        Pisang itu buah yang berwarna kuning
+                    </p>
+                </li>
+                <li>
+                    Mangga
+                    <p class="text-sm text-gray-600">
+                        Mangga buah manis yang enak
+                    </p>
+                </li>
+                <li>
+                    Jambu
+                    <p class="text-sm text-gray-600">
+                        Jambu mempunyai nama yang unik, Jambu Monyet
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ===== URUTAN ANGKA / ORDERED LIST ===== -->
+        <section>
+            <h2 class="text-xl font-bold mb-3">Urutan Angka</h2>
+
+            <!-- atribut urutan angka: list-decimal -->
+            <ol class="list-decimal pl-6 space-y-1">
+                <li>Buka VSCode</li>
+                <li>Open folder project</li>
+                <li>Buat file index.html</li>
+                <li>Isi index.html dengan codingan</li>
+                <li>Jalankan dengan preview</li>
+            </ol>
+        </section>
+
+        <!-- ===== TABLE ===== -->
+        <section>
+            <h2 class="text-xl font-bold mb-3">Tabel</h2>
+
+            <!-- overflow-x-auto supaya tabel aman di layar kecil -->
+            <div class="overflow-x-auto">
+                <table class="w-full border border-gray-300 text-sm">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="border px-4 py-2">Company</th>
+                            <th class="border px-4 py-2">Contact</th>
+                            <th class="border px-4 py-2">Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-100">
+                            <td class="border px-4 py-2">Jajang</td>
+                            <td class="border px-4 py-2">jajang@test.com</td>
+                            <td class="border px-4 py-2">Indonesia</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100">
+                            <td class="border px-4 py-2">Mirja</td>
+                            <td class="border px-4 py-2">mirja@test.com</td>
+                            <td class="border px-4 py-2">Indonesia</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100">
+                            <td class="border px-4 py-2">Asep</td>
+                            <td class="border px-4 py-2">asep@test.com</td>
+                            <td class="border px-4 py-2">Germany</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ===== IMAGE ===== -->
+        <section>
+            <h2 class="text-xl font-bold mb-3">Gambar</h2>
+
+            <!-- alt digunakan untuk aksesibilitas -->
+            <img src="./revou.png" alt="Logo RevoU" class="h-64 rounded shadow">
+        </section>
+
+        <!-- ===== LINK ===== -->
+        <section>
+            <h2 class="text-xl font-bold mb-3">Link</h2>
+
+            <!-- target="_blank" untuk membuka tab baru -->
+            <p>
+                Ini link ke
+                <a href="https://www.revou.co" target="_blank"
+                   class="text-blue-600 underline hover:text-blue-800">
+                    RevoU
+                </a>
+            </p>
+
+            <div class="space-x-4 mt-2">
+                <a href="./second.html" class="text-blue-600 hover:underline">
+                    Second.html
+                </a>
+
+                <!-- anchor link ke bagian tertentu -->
+                <a href="#lorem" class="text-blue-600 hover:underline">
+                    Go To Lorem
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== FORM ===== -->
+        <section>
+            <h2 class="text-xl font-bold mb-4">Form Contact Us</h2>
+
+            <form class="space-y-4 bg-white p-6 rounded shadow">
+
+                <div>
+                    <label class="block font-semibold">Nama</label>
+
+                    <!-- type hanya 2: text untuk huruf, number untuk angka -->
+                    <input type="text" placeholder="Tulis nama anda..."
+                        class="w-full border rounded px-3 py-2">
+                </div>
+
+                <div>
+                    <label class="block font-semibold">Umur</label>
+
+                    <!-- min & max untuk membatasi input angka -->
+                    <input type="number" min="0" max="100"
+                        class="w-full border rounded px-3 py-2">
+                </div>
+
+                <div>
+                    <label class="block font-semibold">Password</label>
+
+                    <!-- type password menyembunyikan karakter -->
+                    <input type="password"
+                        class="w-full border rounded px-3 py-2">
+                </div>
+
+                <div>
+                    <label class="block font-semibold">Jenis Kelamin</label>
+
+                    <!-- radio: hanya bisa pilih satu -->
+                    <div class="space-x-4">
+                        <label>
+                            <input type="radio" name="jenis-kelamin">
+                            Laki-laki
+                        </label>
+                        <label>
+                            <input type="radio" name="jenis-kelamin">
+                            Perempuan
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-semibold">Makanan Favorit</label>
+
+                    <!-- select digunakan untuk pilihan dropdown -->
+                    <select class="w-full border rounded px-3 py-2">
+                        <option>Nasi Goreng</option>
+                        <option>Sate</option>
+                        <option>Pecel</option>
+                        <option>Ayam Bakar</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block font-semibold">Comment</label>
+
+                    <!-- textarea untuk input teks panjang -->
+                    <textarea rows="4"
+                        class="w-full border rounded px-3 py-2"
+                        placeholder="Tulis komentar anda disini..."></textarea>
+                </div>
+
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox">
+                    <span>Saya setuju dengan syarat & ketentuan</span>
+                </div>
+
+                <!-- submit untuk mengirim form -->
+                <button type="submit"
+                    class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                    Kirim
+                </button>
+
+                <!-- <button type="submit">Send</button> (bisa pake ini juga) -->
+            </form>
+        </section>
+
+        <!-- ===== LOREM ===== -->
+        <section id="lorem">
+            <p class="text-sm text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            </p>
+        </section>
+
+    </main>
+
 </body>
 </html>
